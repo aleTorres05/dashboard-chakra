@@ -16,7 +16,12 @@ import { FaHome } from 'react-icons/fa';
 function NavigationBar() {
   return (
     <Box>
-      <Heading textAlign="center" marginTop="10px" textColor="white">
+      <Heading
+        textAlign="center"
+        marginTop="10px"
+        textColor="white"
+        fontSize="3xl"
+      >
         Dashboard
       </Heading>
       <Center height="50px">

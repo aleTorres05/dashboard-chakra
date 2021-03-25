@@ -21,8 +21,8 @@ function MenuProfile() {
   const cancelRef = useRef();
 
   return (
-    <Menu border="1px" textAlign="center" p={2}>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+    <Menu textAlign="center">
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} size="md">
         Ryan Florence
       </MenuButton>
       <MenuList>
@@ -54,7 +54,11 @@ function MenuProfile() {
           </AlertDialogContent>
         </AlertDialogOverlay>
       </AlertDialog>
-      <Avatar name="Ryan Florence" src="https://bit.ly/ryan-florence"></Avatar>
+      <Avatar
+        name="Ryan Florence"
+        src="https://bit.ly/ryan-florence"
+        size="md"
+      ></Avatar>
     </Menu>
   );
 }
