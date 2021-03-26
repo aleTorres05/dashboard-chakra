@@ -11,7 +11,7 @@ import {
   StatNumber,
 } from '@chakra-ui/react';
 
-function HomePage() {
+function Stats() {
   return (
     <Container>
       <Heading textAlign="center" fontSize="2xl" margin="5px">
@@ -38,4 +38,4 @@ function HomePage() {
     </Container>
   );
 }
-export default HomePage;
+export default Stats;

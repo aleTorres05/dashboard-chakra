@@ -19,7 +19,7 @@ function ContainerTabs() {
       <Heading marginBottom="10px" marginTop="5px" textAlign="start">
         Employees
       </Heading>
-      <Tabs variant="soft-rounded" colorScheme="purple">
+      <Tabs variant="soft-rounded" colorScheme="orange">
         <TabList>
           <Tab>1</Tab>
           <Tab>2</Tab>
