@@ -14,6 +14,7 @@ import NavigationBar from '../NavigationBar';
 
 function DrawerNavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box>
       <Button
