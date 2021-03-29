@@ -36,7 +36,7 @@ function NavigationBar() {
               textAlign="center"
               textColor="white"
             >
-              <LinkOverlay href="/">
+              <LinkOverlay href="/home">
                 <Icon
                   as={FaHome}
                   w={4}
@@ -60,36 +60,6 @@ function NavigationBar() {
               <LinkOverlay href="/table">
                 Table
                 <ChevronRightIcon w={6} h={6} textAlign="center" />
-              </LinkOverlay>
-            </Text>
-          </LinkBox>
-        </ListItem>
-        <ListItem>
-          <LinkBox maxW="xl" maxH="50px" p="4">
-            <Text
-              fontSize="lg"
-              fontWeight="bold"
-              textAlign="center"
-              textColor="white"
-            >
-              <LinkOverlay href="#">
-                Home
-                <ChevronRightIcon w={6} h={6} />
-              </LinkOverlay>
-            </Text>
-          </LinkBox>
-        </ListItem>
-        <ListItem>
-          <LinkBox maxW="xl" maxH="50px" p="4">
-            <Text
-              fontSize="lg"
-              fontWeight="bold"
-              textAlign="center"
-              textColor="white"
-            >
-              <LinkOverlay href="#">
-                Home
-                <ChevronRightIcon w={6} h={6} />
               </LinkOverlay>
             </Text>
           </LinkBox>

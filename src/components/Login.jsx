@@ -14,8 +14,8 @@ import { useHistory } from 'react-router-dom';
 
 function Login({ onLogin = () => {} }) {
   const history = useHistory();
-  const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => history.push('/');
+  const { register, handleSubmit } = useForm();
+  const onSubmit = data => history.push('/home');
   onLogin();
   const [show, setShow] = useState(false);
   const handelClick = () => setShow(!show);
@@ -42,7 +42,6 @@ function Login({ onLogin = () => {} }) {
                 ref={register({ required: true })}
               />
               <FormLabel fontWeight="bold">Password</FormLabel>
-
               <InputGroup>
                 <Input
                   type={show ? 'text' : 'password'}

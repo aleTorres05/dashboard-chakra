@@ -1,68 +1,69 @@
 import React from 'react';
 import Login from './components/Login';
 import { Switch, Route } from 'react-router-dom';
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Box, Grid, GridItem } from '@chakra-ui/react';
 import TopBar from './components/TopBar';
 import Stats from './components/HomePage/Stats';
 import ContainerTabs from './components/HomePage/ContainerTabs';
-import TableExample from './components/TableExample';
+import TableExample from './components/TablePage/TableExample';
+import TableExampleStrip from './components/TablePage/TableExampleStrip';
 
 function Dashboard() {
   return (
     <Switch>
       <Route path="/login" component={Login} />
-      <Route
-        path="/"
-        render={() => (
-          <Grid
-            templateRows="repeat(3, 1fr)"
-            templateColumns="repeat(7, 2fr)"
-            gap={5}
-          >
-            <GridItem
-              rowSpan={1}
-              colSpan={7}
-              bg="#ebebeb"
-              border="2px"
-              borderColor="#eb7013"
-            >
-              <TopBar />
-            </GridItem>
-            <GridItem
-              rowSpan={1}
-              colSpan={2}
-              bg="#ebebeb"
-              border="2px"
-              borderColor="#eb7013"
-            >
-              <Stats />
-            </GridItem>
-            <GridItem
-              rowSpan={2}
-              colSpan={3}
-              bg="#ebebeb"
-              border="2px"
-              borderColor="#eb7013"
-            >
-              <ContainerTabs />
-            </GridItem>
-            <Route
-              path="/table"
-              render={() => (
-                <GridItem
-                  rowSpan={2}
-                  colSpan={7}
-                  bg="#ebebeb"
-                  border="2px"
-                  borderColor="#eb7013"
-                >
-                  <TableExample />
-                </GridItem>
-              )}
-            />
-          </Grid>
-        )}
-      />
+      <Grid templateColumns="repeat(8, 1fr)" gap={3}>
+        <GridItem rowSpan={1} colSpan={9}>
+          <Route
+            path="/"
+            render={() => (
+              <Box bg="#ebebeb" border="2px" borderColor="#eb7013">
+                <TopBar />
+              </Box>
+            )}
+          />
+        </GridItem>
+        <GridItem colStart={1} colEnd={4}>
+          <Route
+            path="/home"
+            render={() => (
+              <Box bg="#ebebeb" border="2px" borderColor="#eb7013">
+                <Stats />
+              </Box>
+            )}
+          ></Route>
+        </GridItem>
+        <GridItem colStart={4} colEnd={10}>
+          <Route
+            path="/home"
+            render={() => (
+              <Box bg="#ebebeb" border="2px" borderColor="#eb7013">
+                <ContainerTabs />
+              </Box>
+            )}
+          ></Route>
+        </GridItem>
+        <GridItem colStart={1} colEnd={5}>
+          <Route
+            path="/table"
+            render={() => (
+              <Box bg="#ebebeb" border="2px" borderColor="#eb7013">
+                <TableExample />
+              </Box>
+            )}
+          />
+        </GridItem>
+        <GridItem colStart={5} colEnd={10}>
+          <Route
+            path="/table"
+            render={() => (
+              <Box bg="#ebebeb" border="2px" borderColor="#eb7013">
+                <TableExampleStrip />
+              </Box>
+            )}
+          />
+        </GridItem>
+      </Grid>
     </Switch>
   );
 }
