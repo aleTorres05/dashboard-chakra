@@ -14,7 +14,7 @@ import { useHistory } from 'react-router-dom';
 
 function Login({ onLogin = () => {} }) {
   const history = useHistory();
-  const { register, handleSubmit } = useForm();
+  const { register, errors, handleSubmit } = useForm();
   const onSubmit = data => history.push('/home');
   onLogin();
   const [show, setShow] = useState(false);
@@ -39,7 +39,10 @@ function Login({ onLogin = () => {} }) {
                 type="email"
                 name="email"
                 borderColor="#eb7013"
-                ref={register({ required: true })}
+                ref={register({
+                  required: true,
+                  pattern: /torresalexatlanta@gmail.com/,
+                })}
               />
               <FormLabel fontWeight="bold">Password</FormLabel>
               <InputGroup>
@@ -47,7 +50,7 @@ function Login({ onLogin = () => {} }) {
                   type={show ? 'text' : 'password'}
                   name="password"
                   borderColor="#eb7013"
-                  ref={register({ required: true })}
+                  ref={register({ required: true, pattern: /alex123/ })}
                 />
                 <InputRightElement>
                   <Button
@@ -62,6 +65,7 @@ function Login({ onLogin = () => {} }) {
                   </Button>
                 </InputRightElement>
               </InputGroup>
+              {errors.password && 'email or password is incorrect'}
             </FormControl>
             <Button
               type="submit"

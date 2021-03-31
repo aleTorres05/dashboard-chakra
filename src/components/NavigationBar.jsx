@@ -59,7 +59,22 @@ function NavigationBar() {
             >
               <LinkOverlay href="/table">
                 Table
-                <ChevronRightIcon w={6} h={6} textAlign="center" />
+                <ChevronRightIcon w={6} h={6} />
+              </LinkOverlay>
+            </Text>
+          </LinkBox>
+        </ListItem>
+        <ListItem>
+          <LinkBox maxW="xl" maxH="50px" p="4">
+            <Text
+              fontSize="lg"
+              fontWeight="bold"
+              textAlign="center"
+              textColor="white"
+            >
+              <LinkOverlay href="/contact-us">
+                Contact Us
+                <ChevronRightIcon w={6} h={6} />
               </LinkOverlay>
             </Text>
           </LinkBox>
